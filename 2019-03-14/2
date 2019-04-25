@@ -1,0 +1,6 @@
+quicksort :: [Int] -> [Int]
+quicksort [] = []
+quicksort (p:xs) =
+  lesser ++ [p] ++ greater
+    where lesser = filter (< p) xs
+          greater = filter (>= p) xs
